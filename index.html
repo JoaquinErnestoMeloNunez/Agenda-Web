@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Agenda de Contactos</title>
+</head>
+    <div class="contenedor">
+        <div class="encabezado">
+            <h1>Agenda de Contactos</h1>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu-lista">
+                <li class="menu-item">
+                    <a class="menu-enlace">Contactos</a>
+                    <ul class="submenu">
+                        <li><a class="submenu-enlace" onclick="mostrarSeccion('agregar')">Agregar Contacto</a></li>
+                        <li><a class="submenu-enlace" onclick="mostrarSeccion('lista')">Ver Lista de Contactos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="seccionAgregar" class="tarjeta seccion activa">
+            <h2 class="titulo-seccion">Agregar Nuevo Contacto</h2>
+            <div id="mensajeFormulario"></div>
+            <form id="formularioContacto" class="formulario">
+                <div class="grupo-input">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+                </div>
+                <div class="grupo-input">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
+                </div>
+                <div class="grupo-input">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="XXX-XXX-XXXX">
+                </div>
+                <button type="submit" class="boton" id="botonAgregar">Agregar Contacto</button>
+            </form>
+        </div>
+
+        <div id="seccionLista" class="tarjeta seccion">
+            <h2 class="titulo-seccion">
+                Lista de Contactos
+                <span class="contador-contactos" id="contadorContactos"></span>
+            </h2>
+            <div class="buscador">
+                <input type="text" id="buscador" placeholder="Buscar contacto por nombre, apellido o teléfono...">
+            </div>
+            <div id="listaContactos"></div>
+        </div>
+    </div>
+    </body>
+</html>

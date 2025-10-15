@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f172a;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.encabezado {
+  text-align: center;
+  color: #f1f5f9;
+  margin-bottom: 30px;
+}
+
+.encabezado h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.encabezado p {
+  font-size: 1em;
+  color: #94a3b8;
+}
+
+.menu {
+  background: #1e293b;
+  padding: 0;
+  margin-bottom: 20px;
+  border: 1px solid #334155;
+}
+
+.menu-lista {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-enlace {
+  display: block;
+  color: #f1f5f9;
+  padding: 15px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-enlace:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: #1e293b;
+  min-width: 200px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #334155;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu-enlace {
+  display: block;
+  color: #f1f5f9;
+  padding: 12px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px solid #334155;
+}
+
+.submenu-enlace:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.seccion {
+  display: none;
+}
+
+.seccion.activa {
+  display: block;
+}
+
+.tarjeta {
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: grid;
+  gap: 15px;
+}
+
+.grupo-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-input label {
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+.grupo-input input {
+  padding: 10px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #f1f5f9;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.grupo-input input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.boton {
+  padding: 12px 24px;
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.boton:hover {
+  background: #0ea5e9;
+}
+
+.boton:active {
+  background: #0284c7;
+}
+
+.boton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.titulo-seccion {
+  color: #f1f5f9;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contador-contactos {
+  font-size: 0.8em;
+  color: #94a3b8;
+  font-weight: normal;
+}
+
+.buscador {
+  margin-bottom: 20px;
+}
+
+.buscador input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #f1f5f9;
+  font-size: 1em;
+}
+
+.buscador input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.lista-contactos {
+  display: grid;
+  gap: 10px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.lista-contactos::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lista-contactos::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.lista-contactos::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 4px;
+}
+
+.lista-contactos::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
+.contacto {
+  background: #0f172a;
+  padding: 15px;
+  border: 1px solid #334155;
+  border-left: 3px solid #38bdf8;
+}
+
+.contacto:hover {
+  background: #1e293b;
+  border-left-color: #a78bfa;
+}
+
+.contacto-nombre {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 5px;
+}
+
+.contacto-telefono {
+  font-size: 1em;
+  color: #94a3b8;
+}
+
+.contacto-telefono::before {
+  content: "Tel: ";
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.mensaje {
+  padding: 12px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.mensaje-exito {
+  background: #1e293b;
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+.mensaje-error {
+  background: #1e293b;
+  color: #f87171;
+  border-color: #f87171;
+}
+
+.cargando {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+  font-size: 1.2em;
+}
+
+.sin-contactos {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+  font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+  .encabezado h1 {
+    font-size: 2em;
+  }
+
+  .tarjeta {
+    padding: 20px;
+  }
+}
